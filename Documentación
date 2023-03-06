@@ -1,0 +1,90 @@
+Paso instalación de dependencias:
+sudo apt-get install curl gpg
+
+Descargamos el archivo:
+wget https://download.checkmk.com/checkmk/2.1.0p23/check-mk-raw-2.1.0p23_0.focal_amd64.deb
+Ahora lo instalamos:
+sudo apt install ./check-mk-raw-2.1.0p23_0.focal_amd64.deb
+
+En el caso de que muestre un error ejecutamos:
+sudo dpkg -i check-mk-raw-2.1.0p23_0.focal_amd64.deb
+
+
+Y si vuelve a fallar por falta de dependencias seleccionamos:
+sudo apt-get -f install
+
+
+Volvemos a ejecutar el comando dpkg:
+sudo dpkg -i check-mk-raw-2.1.0p23_0.focal_amd64.deb
+
+
+Ahora comprobamos el fichero:
+omd version
+
+
+Ahora habiltamos el firewall:
+sudo ufw enable
+sudo ufw allow http 
+sudo ufw allow https
+sudo ufw allow ssh
+
+
+Ahora creamos el entorno
+sudo omd create monitoreo
+
+
+Datos que muestra:
+
+  The admin user for the web applications is cmkadmin with password: 3KzjqvAi
+  For command line administration of the site, log in with 'omd su monitoreo'.
+  After logging in, you can change the password for cmkadmin with 'cmk-passwd cmkadmin'
+
+Ahora accedemos con el usuario:
+
+sudo omd su monitoreo
+
+
+Y cambiamos la contraseña del usuario:
+cmk-passwd cmkadmin
+Contraseña: Eloyto11#
+
+Vamos a ver el estado del servidor checkMK:
+omd status
+
+Vamos a iniciar el servicio:
+
+sudo omd start monitoreo
+
+
+http://direccion/monitoreo
+
+
+Ya tendremos lista nuestra pagina web
+
+
+
+
+
+AGENTES:
+Instalación nos vamos a:
+Configuración -> Agentes:
+
+Descargamos el binario e instalamos
+
+dpkg -i check-mk-agent_2.1.0p23-1_all.deb
+
+
+
+METER AGENTE:
+Configuracion/anfitriones/añadir a la supervision
+
+
+
+
+
+
+
+
+
+
+
