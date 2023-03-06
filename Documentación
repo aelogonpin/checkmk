@@ -78,6 +78,23 @@ dpkg -i check-mk-agent_2.1.0p23-1_all.deb
 METER AGENTE:
 Configuracion/anfitriones/añadir a la supervision
 
+Ponemos host:
+IP:
+
+Y le damos a guardar e ir a la configuración del servicio.
+
+Despues en la parte superior le damos a aceptar todo.
+
+
+
+
+
+APLICAR CAMBIOS GLOBALES:
+
+
+A continuación para aplicar los cambios tendremos que darle al warning de la derecha
+Pulsamos en "Activar en los sitios seleccionados"
+
 
 
 
