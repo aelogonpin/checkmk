@@ -53,8 +53,14 @@ omd status
 
 Vamos a iniciar el servicio:
 
-sudo omd start monitoreo
+  sudo omd start monitoreo
+En el caso de que la contraseña no deja o no funciona prueba esta alternativa:
 
+omd start
+
+
+
+Finalmente tienes listo los servicios:
 
 http://direccion/monitoreo
 
